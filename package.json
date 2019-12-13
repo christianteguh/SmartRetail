@@ -1,0 +1,16 @@
+{
+  "name": "smartretail",
+  "version": "1.0.0",
+  "description": "Project For Storing Postman",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "api-smartretail-premaster": "newman run SmartRetail.postman_collection.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^4.5.7"
+  }
+}

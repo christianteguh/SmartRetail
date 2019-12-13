@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "45e1de38-5cb0-4f24-a2ae-dcf1fdc3be2b",
+		"name": "SmartRetail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.cekpoin.net/v1/customer/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc772963-9606-4ad8-9b6e-8d78790e9a44",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzQ1MDc3MzgsImlhdCI6MTU3NDQyMTMzOCwiaXNzIjoiU21hcnRSZXRhaWwiLCJ0b2tlbl90eXBlIjoidG9rZW4iLCJ1aWQiOjE3MTI3N30.2uv0OSs4MeotP4EykZps3f4iDiin4CQWy3ria-pncew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"testing.cekpoin@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.cekpoin.net/v1/customer/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cekpoin",
+						"net"
+					],
+					"path": [
+						"v1",
+						"customer",
+						"login"
+					]
+				},
+				"description": "Customer Login "
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.cekpoin.net/v1/smart-retail/carts/checkout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e02ab397-7529-4d9b-9c2c-a9c5b0f65303",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzYyOTkxODUsImlhdCI6MTU3NjIxMjc4NSwiaXNzIjoiU21hcnRSZXRhaWwiLCJ0b2tlbl90eXBlIjoidG9rZW4iLCJ1aWQiOjE1Nzg5OX0.RQ2_FqssHauh8eUh_x84kpJctnXHYO2FPyEgLbU_ut8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"warehouseId\": 2,\r\n  \"paymentMethodId\": 37,\r\n  \"staffId\": 22,\r\n  \"products\": [\r\n    {\r\n      \"barcode\": \"0475000000001\",\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.cekpoin.net/v1/smart-retail/carts/checkout",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cekpoin",
+						"net"
+					],
+					"path": [
+						"v1",
+						"smart-retail",
+						"carts",
+						"checkout"
+					]
+				},
+				"description": "Checkout Cart"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.cekpoin.net/v1/smart-retail/orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7163d50-9a53-4c5d-8aba-ec8d4472ff5a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzYwMzkwMDIsImlhdCI6MTU3NTk1MjYwMiwiaXNzIjoiU21hcnRSZXRhaWwiLCJ0b2tlbl90eXBlIjoidG9rZW4iLCJ1aWQiOjE1Nzg5OX0.PZnbSMP6NUew0zBnXS46qh76O_E1QHtyCw7REuhoSbQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerEmail\": \"testing.cekpoin@gmail.com\",\r\n  \"warehouseKey\": \"SNP\",\r\n  \"paymentMethodKey\": \"T-SNP01\",\r\n  \"staffEmail\": \"michael.angelo@ottencoffee.co.id\",\r\n  \"otsarNumber\": \"19.02222\",\r\n  \"subtotal\": 180000,\r\n  \"discount\": 0,\r\n  \"total\": 180000,\r\n  \"createdAt\": \"2019-05-10 12:05:00\",\r\n  \"products\": [\r\n    {\r\n      \"barcode\": \"0475000000001\",\r\n      \"quantity\": 2,\r\n      \"price\": 90000,\r\n      \"discount\": 0,\r\n      \"total\": 180000\r\n    }\r\n  ]\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.cekpoin.net/v1/smart-retail/orders",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cekpoin",
+						"net"
+					],
+					"path": [
+						"v1",
+						"smart-retail",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1c2a9d6f-6c83-4e2b-b601-ad37d9610152",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "82ebebe7-e116-47f9-9a74-2d3ffc7a066d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
