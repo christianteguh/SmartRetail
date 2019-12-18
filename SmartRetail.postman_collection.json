@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http:///%7B%7Burl.prem%7D%7D/v1/customer/login"",
+			"name": "{{url.prem}}/v1/customer/login",
 			"event": [
 				{
 					"listen": "test",
@@ -68,7 +68,7 @@
 			"response": []
 		},
 		{
-			"name": "http:///%7B%7Burl.prem%7D%7D/v1/smart-retail/carts/checkout",
+			"name": "{{url.prem}}/v1/smart-retail/carts/checkout",
 			"event": [
 				{
 					"listen": "test",
@@ -130,7 +130,7 @@
 			"response": []
 		},
 		{
-			"name": "http:///%7B%7Burl.prem%7D%7D/v1/smart-retail/orders",
+			"name": "{{url.prem}}/v1/smart-retail/orders",
 			"event": [
 				{
 					"listen": "test",
