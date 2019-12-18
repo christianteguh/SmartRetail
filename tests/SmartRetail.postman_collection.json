@@ -53,12 +53,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://api.cekpoin.net/v1/customer/login",
-					"protocol": "https",
+					"raw": "{{url.prem}}/v1/customer/login",
 					"host": [
-						"api",
-						"cekpoin",
-						"net"
+						"{{url.prem}}"
 					],
 					"path": [
 						"v1",
@@ -76,11 +73,12 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e02ab397-7529-4d9b-9c2c-a9c5b0f65303",
+						"id": "0886fef0-3cc1-424c-96c3-5b7a90231ea7",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
+							"});",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -92,7 +90,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzY1ODM4MTksImlhdCI6MTU3NjQ5NzQxOSwiaXNzIjoiU21hcnRSZXRhaWwiLCJ0b2tlbl90eXBlIjoidG9rZW4iLCJ1aWQiOjE1Nzg5OX0.dbBFjKOIEx2tXSKvtpS5ywr6oEMUrVAgx5XJpvx6IRg",
+							"value": "{{accessToken}}",
 							"type": "string"
 						}
 					]
@@ -116,12 +114,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://api.cekpoin.net/v1/smart-retail/carts/checkout",
-					"protocol": "https",
+					"raw": "{{url.prem}}/v1/smart-retail/carts/checkout",
 					"host": [
-						"api",
-						"cekpoin",
-						"net"
+						"{{url.prem}}"
 					],
 					"path": [
 						"v1",
