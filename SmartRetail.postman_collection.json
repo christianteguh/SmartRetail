@@ -175,12 +175,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://api.cekpoin.net/v1/smart-retail/orders",
-					"protocol": "https",
+					"raw": "{{url.prem}}/v1/smart-retail/orders",
 					"host": [
-						"api",
-						"cekpoin",
-						"net"
+						"{{url.prem}}"
 					],
 					"path": [
 						"v1",
