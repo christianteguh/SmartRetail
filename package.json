@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "api-tests-production": "newman run SmartRetail.postman_collection.json"
+    "test": "newman run SmartRetail.postman_collection.json -e env.json"
   },
   "author": "Christian Teguh",
   "dependencies": {
